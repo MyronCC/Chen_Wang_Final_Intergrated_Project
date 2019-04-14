@@ -29,6 +29,8 @@ img {
 {
 	margin: 0 auto;
 	max-width: 1200px;
+	/*display: flex;
+	flex-direction: column;*/
 }
 
 a 
@@ -38,17 +40,14 @@ a
   transition:all .1s linear 0s;
 }
 /*Header & Footer*/
-#topBar
+#mainHeader
 {
-	display: flex;
-	flex-direction: row;
-	background-color: #000;
-	height: 40px;
+	position: relative;
 }
 
-#logo
+#logoDesktop
 {
-	margin: 0 auto;
+	display: none;
 }
 
 #mainNav
@@ -58,14 +57,20 @@ a
   margin-top: 5px;
 }
 
+
 #mainNav button
 {
-	background: url(../img/burger.svg) center no-repeat;
-	width: 20px;
-	height: 20px;
-	border: 0px;
-	transition: all 400ms ease;
-	margin-left: auto;
+  background: url(../images/burger.svg) center no-repeat;
+  width: 20px;
+  height: 20px;
+  border: 0px;
+  transition: all 400ms ease;
+  margin-left: auto;
+}
+
+#burgerMenu
+{
+	
 }
 
 #mainNav button.expanded
@@ -79,8 +84,9 @@ a
 {
   display: block;
   padding: 10px 0 10px 0; /*trbl*/
-  color: #8ea75d;
+  color: #000;
   text-align: center;
+  font-family: 'Arial';
 }
 
 #mainNav li
@@ -111,7 +117,412 @@ a
   display: block;
 }
 
-#burgerMenu
+#logoResponse img
 {
+	display: block;
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+footer
+{
+	background: #000;
+}
+
+#mainFooter
+{
+  background-color: #000;
+  height: 70px;
+  margin: 0 auto;
+  display: block;
+}
+
+#footerNav
+{
+  display: none;
+}
+
+#backTop
+{
+	text-align: center;
+	font-family: 'Arial';
+}
+
+#backBut
+{
+  color: #fff;
+  line-height: 70px;
+  text-align: center;
+}
+
+#backBut:hover
+{
+  color: #333;
+}
+
+.copyright
+{
+	display: none;
+}
+@media screen and (min-width: 640px){
+
+
+
+	#topBar
+  {
+    display: flex;
+    flex-direction: row;
+  }
 	
+	#logoDesktop
+	{
+		margin-top: 20px;
+		display: block;
+		width: 10%;
+	}
+  #button
+  {
+    display: none;
+  }
+
+  #burgerCon
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  #mainNav
+  {
+  	margin-left: auto;
+  	margin-top: 3.5%;
+  }
+
+  #mainNav li
+  {
+    border-bottom: none;
+    display: inline;
+    margin-right: 20px;
+  }
+
+  #mainNav li a 
+  {
+    display: inline;
+    padding: 5px 0 5px 0;
+    color: #000;
+  }
+
+  #mainNav li a:hover
+{
+  color: #8c8c8c;
+  border-bottom: 3px solid #8c8c8c;
+  padding-bottom: 5px;
+}
+
+  #mainNav ul li:first-child
+  {
+    border-top: none;
+  }
+
+	#logoResponse
+	{
+		display: none;
+	}
+
+	#backBut
+  {
+    display: none;
+  }
+
+
+  #footerNav
+  {
+    display: block;
+  }
+
+	#footerCon
+	{
+		
+
+	}
+
+  #footerCon ul li
+  {
+    display: inline;
+    margin-left: 20px;
+  }
+
+  #footerCon ul li a
+  {
+    color: #fff;
+    line-height: 70px;
+    font-family: 'Arial';
+  }
+
+  #footerCon ul li a:hover
+  {
+    color: #8C8c8c;
+  }
+
+  .copyright
+  {
+  	display: flex;
+  	line-height: 70px;
+  	float: right;
+  	margin-right: 0 auto;
+  	margin-top: -35px;
+  	margin-right: 20px;
+  	color: #fff;
+  }
+
+
+}
+/*homepage body*/
+#introCon
+{
+	position: relative;	
+}
+#titleText
+{
+	display: none;
+}
+
+#swipeImg
+{
+	max-width: 640px;
+	/*display: block;*/
+
+}
+
+#mobileImgs
+{
+	/*display: block;*/
+}
+
+#hoverImg
+{
+	display: none;
+}
+.bg {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: opacity .9s linear;
+  -moz-transition: opacity .9s linear;
+  -o-transition: opacity .9s linear;
+  transition: opacity .9s linear;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+#bg1 {
+  background: url(../images/hp_river_mb.jpg) no-repeat;
+  background-size: 100%, cover;
+}
+
+#bg2 {
+  background: url(../images/hp_river2_mb.jpg) no-repeat;
+  background-size: 100%, cover;
+}
+
+#bg3 {
+  background: url(../images/hp_river3_mb.jpg) no-repeat;
+  background-size: 100%, cover;
+}
+
+.bg p
+{
+	margin-top: 30px;
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	font-size: 24px;
+}
+
+#bg2
+{
+	color: #fff;
+}
+
+.fadeIn {
+  opacity: 100;
+  filter: alpha(opacity=100);
+}
+
+.pagination {
+  width: auto;
+  display: table;
+  margin: 0 auto;
+}
+
+.pagination-panel {
+  width: 100%;
+  padding-top: 120%;
+  /*position: fixed;*/
+  bottom: 0px;
+  z-index: 100;
+  height: auto;
+}
+
+.pagination li {
+  border-radius: 10px;
+  height: 10px;
+  width: 10px;
+  background: #fff;
+  float: left;
+  margin-right: 10px;
+  list-style-type: none
+}
+
+.pagination li.active {
+  background: #52c6d8
+}
+
+.pagination li:last-child {
+  margin-right: 0
+}
+
+#membershipCon
+{
+	display: flex;
+	flex-direction: column-reverse;
+	/*margin: 0 auto;*/
+	margin-top: 25%;
+
+}
+
+#membershipForm
+{
+	margin-bottom: 10%;
+}
+
+#membershipForm h2
+{
+	font-family: 'Londrina Solid', cursive;
+	text-align: center;
+	font-size: 24px;
+}
+
+#membershipForm p
+{
+	font-size: 15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	line-height: 20px;
+	font-family: 'Arial';
+}
+
+#membershipForm span
+{
+	font-family: 'Londrina Solid', cursive;
+}
+
+#membershipImg
+{
+	background: url(../images/membership.jpg) no-repeat center;
+	background-size: cover;
+	height: 50vh;
+
+}
+
+
+@media screen and (min-width: 640px)  {
+	#swipeImg
+	{
+		display: none;
+	}
+
+	#titleText
+	{
+		display: block;
+	}
+
+	#titleText h2
+	{
+		padding-top: 50px;
+		text-align: center;
+		font-family: 'Lobster', cursive;
+		font-size: 36px;
+		line-height: 40px;
+	}
+
+	#titleText span
+	{
+		font-family: 'Londrina Solid', cursive;
+		font-size: 24px;
+	}
+
+	#introCon
+	{
+		margin-top: 20px;
+		background: url(../images/hp_river.jpg) center;
+		background-size: cover;
+	}
+
+	#hoverImg
+	{
+		display: flex;
+		flex-direction: row;
+		margin-top: 30%;
+		padding-bottom: 10%;
+	}
+
+	#hoverImg img
+	{
+		width: 15%;
+		height: 15%;
+		border-radius: 10px;
+		border: solid #fff 2px;
+		text-align: center;
+		margin: 0 auto;
+		transition: .5s all;
+	}
+
+	#hoverImg img:hover
+	{
+		border: solid #8c8c8c 2px;
+	}
+
+	#introCon > #img2:hover
+	{
+		
+	
+		background: url(../images/hp_river2.jpg) center;
+		background-size: cover;
+	
+	}
+
+	#membershipCon
+	{
+		display: flex;
+		flex-direction: row;
+		margin-top: 0px;
+		width: 100%;
+		position: relative;
+	}
+
+	#membershipImg
+	{
+		width: 45%;
+		height: 100%;
+		position: absolute;
+	}
+
+	#membershipForm
+	{
+		margin-left: auto;
+		width: 55%;
+	}
+
+	#membershipForm h2
+	{
+		margin-top: 100px;
+	}
+
+	#membershipForm p
+	{
+		margin-bottom: 50px;
+	}
 }
