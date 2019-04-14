@@ -1,0 +1,117 @@
+/*Utility Class*/
+.hide
+{
+	display: none;
+}
+
+/* General rules - scales images, videos to size of container */
+img, embed, object, video {
+  max-width: 100%; }
+
+
+/*switch box model*/
+html {
+  box-sizing: border-box; 
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+/*Fix for scaling of images IE*/
+img {
+  -ms-interpolation-mode: bicubic; 
+}
+
+/*General Setting*/
+.container
+{
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+a 
+{ 
+  color:#000; 
+  text-decoration: none;  
+  transition:all .1s linear 0s;
+}
+/*Header & Footer*/
+#topBar
+{
+	display: flex;
+	flex-direction: row;
+	background-color: #000;
+	height: 40px;
+}
+
+#logo
+{
+	margin: 0 auto;
+}
+
+#mainNav
+{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+#mainNav button
+{
+	background: url(../img/burger.svg) center no-repeat;
+	width: 20px;
+	height: 20px;
+	border: 0px;
+	transition: all 400ms ease;
+	margin-left: auto;
+}
+
+#mainNav button.expanded
+{
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+#mainNav li a
+{
+  display: block;
+  padding: 10px 0 10px 0; /*trbl*/
+  color: #8ea75d;
+  text-align: center;
+}
+
+#mainNav li
+{
+  border-bottom: 1px solid #efefef;
+}
+
+#mainNav li:first-child
+{
+  border-top: 1px solid #efefef;
+}
+
+#mainNav li:last-child
+{
+  margin-bottom: 10px;
+}
+
+#burgerCon
+{
+  margin-top: 20px;
+  display: none;
+  margin-bottom: 20px;
+}
+
+
+#burgerCon.slideToggle
+{
+  display: block;
+}
+
+#burgerMenu
+{
+	
+}
