@@ -1288,3 +1288,73 @@ footer
 		height: 600px;
 	}
 }
+
+/*newsletter*/
+#newsletterCon
+{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	background-color: #000;
+	margin-top: 20px;
+}
+
+#newsletterCon h2
+{
+	font-family: 'Lobster', cursive;
+	font-size: 36px;
+	padding-top: 20px;
+	color: #fff;
+	margin-bottom: 20px;
+	letter-spacing: 2px;
+}
+
+#newsletterCon p
+{
+	color: #fff;
+	font-family: 'Arial';
+	width: 90%;
+	margin: 0 auto;
+	font-size: 14px;
+	letter-spacing: 1.5px;
+	line-height: 200%;
+	padding-bottom: 20px;
+}
+
+#timeline
+{
+	margin-top: 30px;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+#columnTime
+{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#columnTime li
+{
+	text-decoration: none;
+	list-style-type: none;
+}
+
+#columnTime li a
+{
+	transition: .5s all
+}
+
+#columnTime li a:hover
+{
+	color: #8c8c8c;
+}
+#columnTime
+{
+	font-family: 'Londrina Solid', cursive;
+	line-height: 300%;
+}

@@ -113,7 +113,7 @@ ImageSwiper.prototype.touchmove = function(e) {
 	    }
 
 	  }
-	  //在样式表中设置好 .fadeIn 的透明度为0
+	  //opacity setting
 	ImageSwiper.prototype.fadeIn = function(e) {
 	  e.classList.add("fadeIn")
 	}
@@ -126,7 +126,7 @@ ImageSwiper.prototype.touchmove = function(e) {
 
 	ImageSwiper.prototype.showPic = function(cur_img) {
 	  this.hidePics(this.mobileImgs)
-	    //得到图片元素的真实索引
+	    //get image index
 	  var index = cur_img - 1
 
 	  if (document.getElementsByClassName("active")[0]) {
@@ -143,7 +143,7 @@ ImageSwiper.prototype.touchmove = function(e) {
 	    this.fadeOut(e)
 
 	  }
-	  //传参
+	  //
 	var mobileImgs = new ImageSwiper(document.getElementById('mobileImgs'), 30)
 
 })();
